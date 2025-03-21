@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import CreateTask from "./pages/CreateTask";
+import SeeExistingTaskes from "./pages/SeeExistingTaskes";
+import TaskInsidePage from "./pages/TaskInsidePage";
+import PageHeader from "./Components/PageHeader";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* PageHeader always visible at the top */}
+      <PageHeader />
+
+      {/* Main content below the header */}
+      <div className="main-content">
+        <Routes>
+          <Route path="/create-task" element={<CreateTask />} />
+          <Route path="/" element={<SeeExistingTaskes />} />
+          <Route path="/task/:id" element={<TaskInsidePage />} />
+        </Routes>
+      </div>
     </div>
   );
 }
