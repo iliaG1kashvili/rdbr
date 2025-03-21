@@ -10,7 +10,7 @@ function PageHeader() {
     <div className="PageHeaderMainDiv">
       <div className="HeaderInsideDivForButtons">
         {/* Navigate to SeeExistingTaskes */}
-        <button className="HeaderLogo" onClick={() => navigate("/")}>Momentum</button>
+        <button className="HeaderLogo" onClick={() => navigate("/")}><p className="HeaderLogo">Momentum</p></button>
 
         <div className="HeaderINsideDivForCreatingNewStafOrTask">
             {/* Open popup in center */}

@@ -1,0 +1,63 @@
+/* Main container inside the page */
+.SeeExistingTaskesMainDivInsideDiv {
+    width: 90%;
+    padding-left: 5%;
+}
+
+/* Page title */
+.PagesName {
+    font-family: 'Fira GO', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 0%;
+}
+
+/* Filter section */
+.SeeExistingTaskesMainDivFilter {
+    margin-top: 4vh;
+    padding-left: 1vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    display: flex;
+    gap: 4vw;
+    border: solid 1px #DEE2E6;
+    width: 28vw;
+    border-radius: 10px;
+}
+
+/* General button styles */
+.filtrationButton {
+    background-color: white;
+    border: none;
+    transition: color 0.3s;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Space between text and symbol */
+    position: relative;
+}
+
+/* Default dropdown symbol (downward arrow) */
+.filtrationButton::after {
+    content: "⌄";
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    margin-left: 6px;
+}
+
+/* Change text color on hover */
+.filtrationButton:hover {
+    color: #8338EC; 
+}
+
+/* Active state - toggled using JavaScript */
+.filtrationButton.active {
+    color: #8338EC; 
+}
+
+/* When active, show ⌃ instead of ⌄ */
+.filtrationButton.active::after {
+    content: "⌃";
+}
